@@ -228,3 +228,54 @@ footer a {
         padding: 40px 5%;
     }
 }
+
+/* GB Golf Carts home page */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+.hero > div {
+    min-width: 0;
+}
+
+.contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact p {
+    overflow-wrap: anywhere;
+}
+
+.contact label {
+    display: block;
+}
+
+.contact button {
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
