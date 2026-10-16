@@ -1,64 +1,228 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GB GOLF CARTS - Gordon's Bay - Family Owned Since 2009</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore golf cart refurbishments, repairs, custom builds and completed projects by GB Golfcarts in Gordon's Bay, Western Cape.">
+  <title>Our Work & Gallery | GB Golfcarts</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .gallery {
+      background: #f7f5ef;
+      padding: 55px 22px 70px;
+    }
+
+    .gallery-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 35px;
+    }
+
+    .gallery h2 {
+      color: #35483d;
+      font-size: clamp(27px, 4vw, 35px);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .gallery-intro p {
+      color: #687169;
+      margin-top: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .gallery-card {
+      background: #fff;
+      border: 1px solid #e4e5df;
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(37, 43, 40, 0.05);
+    }
+
+    .gallery-photo {
+      min-height: 230px;
+      background: #e9eee8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #687169;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .gallery-photo img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 20px 22px 23px;
+    }
+
+    .gallery-caption h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      color: #35483d;
+      margin-bottom: 7px;
+    }
+
+    .gallery-caption p {
+      color: #687169;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .gallery-contact {
+      max-width: 760px;
+      margin: 45px auto 0;
+      text-align: center;
+      padding: 28px 20px;
+      background: #e9eee8;
+      border-radius: 7px;
+    }
+
+    .gallery-contact h3 {
+      color: #35483d;
+      margin-bottom: 10px;
+    }
+
+    .gallery-contact a {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 22px;
+      background: #35483d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .gallery-contact a:hover {
+      background: #252b28;
+    }
+
+    @media (max-width: 650px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-photo img {
+        height: 240px;
+      }
+
+      .gallery {
+        padding: 38px 16px 48px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
- <h1>GB GOLF CARTS</h1>
- <p class="subtitle">Family-Owned • Honest Hands-On Service • Gordon's Bay</p>
- <nav>
- <a href="index.html">Home</a>
- <a href="album.html">Our Work</a>
- <a href="#contact">Contact Willie</a>
- </nav>
+  <h1>GB GOLF CARTS</h1>
+  <p class="subtitle">Honest Hands-On Service • Gordon's Bay</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="album.html">Our Work</a>
+    <a href="index.html#contact">Contact Willie</a>
+  </nav>
 </header>
 
-<section class="welcome">
- <h2>Welcome to GB Golfcarts</h2>
- <p><strong>A premier family-owned golf cart service provider nestled in the picturesque locale of Gordon's Bay, Western Cape.</strong></p>
- <p>After I started playing golf in 2005, familiarising myself with the sport & making use of golf carts on a regular basis, I realised the gap in the market.</p>
- <p>The business venture started in 2009 as a hobby. With <em>honest hands-on service</em> to our clients, we have grown stronger and today we are still a hardworking, professional business, competing in a competitive market.</p>
- <p>Thanks to our loyal customers we are offered the chance to make a difference by our unique business methods & service rendering.</p>
- <p class="mission"><strong>We strive</strong> to serve the market to outdo all competitors by means of service levels, prices and professional advice. <strong>It is our mission</strong> to serve the Golf cart community with professional and high service levels.</p>
-</section>
+<main>
+  <section class="gallery">
+    <div class="gallery-intro">
+      <h2>Our Work – Before & After</h2>
+      <p>
+        Every cart has a story. From repairs and refurbishments to custom
+        builds, we take pride in the work we do.
+      </p>
+      <p>
+        Take a look at our projects and the practical, hands-on service
+        GB Golfcarts is known for.
+      </p>
+    </div>
 
-<section class="services-personal">
- <h2>Your all-in-one golf cart solution</h2>
- <p class="intro">GB Golf-carts is a service based company. We Sell, Buy, Service, Refurbish, Spray, Rebuild, Re-wire and customise all types of golf carts and even do <strong>cart sitting</strong> for travelling owners.</p>
+    <div class="gallery-grid">
 
- <div class="service-grid">
- <div><h3>🚚 Pick-up and Delivery</h3><p>We can pick up and deliver your cart for repairs. Just give us a call and set up an appointment. Drive In's welcome.</p></div>
- <div><h3>🔧 Maintenance & Service</h3><p>We offer maintenance programs and preventative maintenance vital to keep your cart running. We service all makes.</p></div>
- <div><h3>🎨 Speciality & Custom</h3><p>From roll bar to complete body, tyres to tops, complete rewiring, upholstery, spray-painting and canopies - we do it all.</p></div>
- <div><h3>💰 Sales & Advice</h3><p>Looking to purchase good quality new or used? Or sell yours? We sell all spare parts and happy to just give advice.</p></div>
- <div><h3>🏖️ Cart Sitting</h3><p>While you're on holiday, or chasing the summer around the world, we look after and keep your cart in good running order.</p></div>
- <div><h3>🏭 Beyond Golf</h3><p>We operate in private and public sectors - security, mining, manufacturing, logistics, agriculture, elderly and disabled mobility.</p></div>
- </div>
-</section>
+      <article class="gallery-card">
+        <div class="gallery-photo">
+          <span>Photo to be added: Before refurbishment</span>
+        </div>
+        <div class="gallery-caption">
+          <h3>Before Refurbishment</h3>
+          <p>Golf carts assessed and prepared for restoration and improvement.</p>
+        </div>
+      </article>
 
-<section id="contact" class="contact-personal">
- <h2>We would love to hear from you!</h2>
- <p><strong>Contact: WILLIE TRUTER</strong></p>
- <p>Cell: +27 84 989 2452 | Phone: +27 (0)21 856 1236</p>
- <p>Email: truter@gbgolfcarts.co.za</p>
- <p>30 Admiral's Way, Anchorage Park, Gordon's Bay, 7151, South Africa</p>
-</section>
+      <article class="gallery-card">
+        <div class="gallery-photo">
+          <span>Photo to be added: Completed refurbishment</span>
+        </div>
+        <div class="gallery-caption">
+          <h3>Refurbished Carts</h3>
+          <p>Giving used golf carts a new lease on life with careful workmanship.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <div class="gallery-photo">
+          <span>Photo to be added: Custom build or spray work</span>
+        </div>
+        <div class="gallery-caption">
+          <h3>Custom Builds & Spray Work</h3>
+          <p>Custom finishes, bodywork and upgrades to suit each cart and owner.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <div class="gallery-photo">
+          <span>Photo to be added: Batteries, wiring or repairs</span>
+        </div>
+        <div class="gallery-caption">
+          <h3>Repairs & Upgrades</h3>
+          <p>From electrical work to battery upgrades and general maintenance.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="gallery-contact">
+      <h3>Have a golf cart that needs attention?</h3>
+      <p>Contact Willie to discuss servicing, refurbishment or a custom project.</p>
+      <a href="index.html#contact">Contact GB Golfcarts</a>
+    </div>
+  </section>
+</main>
 
 <footer class="truter-footer">
- <img src="truter-final.jpg" alt="Truter Wapen - Osterode 1530 Kompanjetuin 1713 GB Golfcarts 2005" class="truter-wapen">
- <div class="truter-story">
- <strong>500 Jaar Familie Geskiedenis</strong><br>
- Van Osterode am Harz 1530, via die Kompanjetuin Kaapstad 1713, tot Gordon's Bay Golf Carts 2005.<br>
- <em>Honest hands-on service - steeds dieselfde sedert 2009.</em>
- </div>
- <div class="truter-datum">OSTERODE 1530 • KOMPANJETUIN 1713 • GB GOLFCARTS 2005</div>
- <div class="truter-motto">UNICUIQUE SUUM - Aan elkeen sy eie</div>
- <div class="copy">© 2005-2025 GB Golf Carts - Willie Truter Family Business</div>
+  <img src="truter-final.jpg" alt="Truter family coat of arms" class="truter-wapen">
+  <div class="truter-story">
+    <strong>500 Jaar Familie Geskiedenis</strong><br>
+    Van Osterode am Harz 1530, via die Kompanjetuin Kaapstad 1713,
+    tot Gordon's Bay Golfcarts.<br>
+    <em>Honest hands-on service.</em>
+  </div>
+  <div class="truter-datum">
+    OSTERODE 1530 • KOMPANJETUIN 1713 • GB GOLFCARTS 2005
+  </div>
+  <div class="truter-motto">UNICUIQUE SUUM – Aan elkeen sy eie</div>
+  <div class="copy">GB Golfcarts • Gordon's Bay, South Africa</div>
 </footer>
 
 </body>
