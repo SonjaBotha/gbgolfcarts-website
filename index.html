@@ -4,129 +4,551 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore golf cart refurbishments, repairs, custom builds and completed projects by GB Golfcarts in Gordon's Bay, Western Cape.">
-  <title>Our Work & Gallery | GB Golfcarts</title>
-  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="GB Golfcarts in Gordon's Bay offers golf cart repairs, maintenance, parts, refurbishments, custom work and personal service.">
+
+  <title>GB Golfcarts | Honest Advice. Quality Work.</title>
 
   <style>
-    .gallery {
-      background: #f7f5ef;
-      padding: 55px 22px 70px;
+    :root {
+      --charcoal: #252b28;
+      --green: #35483d;
+      --sage: #879887;
+      --pale-sage: #e9eee8;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --text: #353b37;
+      --muted: #687169;
+      --gold: #c6a76b;
+      --line: #e3e5de;
     }
 
-    .gallery-intro {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 25px 20px 20px;
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 35px;
+      border-bottom: 4px solid var(--gold);
     }
 
-    .gallery h2 {
-      color: #35483d;
-      font-size: clamp(27px, 4vw, 35px);
+    .brand {
+      font-size: clamp(25px, 4vw, 38px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      line-height: 1.3;
+    }
+
+    .tagline {
+      color: #d8dfd7;
+      font-size: 14px;
+      margin-top: 7px;
+      letter-spacing: 0.5px;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 28px;
+      margin-top: 19px;
+    }
+
+    .site-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .site-nav a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 85% 20%, rgba(198,167,107,.18), transparent 35%),
+        linear-gradient(125deg, #35483d 0%, #26372e 62%, #202923 100%);
+      color: white;
+      padding: 85px 24px 90px;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #e4cb97;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .hero h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 5.2vw, 61px);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -1px;
+      max-width: 680px;
+    }
+
+    .hero h2 span {
+      color: #e4cb97;
+    }
+
+    .hero-copy {
+      max-width: 600px;
+      margin-top: 23px;
+      color: #e0e5df;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      transition: background 0.2s ease;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    .button-gold:hover {
+      background: #dfc58f;
+    }
+
+    .button-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.6);
+    }
+
+    .button-outline:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    .hero-note {
+      border-left: 2px solid var(--gold);
+      padding: 8px 0 8px 25px;
+      max-width: 330px;
+      justify-self: end;
+    }
+
+    .hero-note strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 500;
       line-height: 1.35;
       margin-bottom: 12px;
     }
 
-    .gallery-intro p {
-      color: #687169;
-      margin-top: 10px;
+    .hero-note p {
+      color: #d8dfd7;
+      font-size: 14px;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
+    .trust-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      padding: 22px 20px;
+    }
+
+    .trust-inner {
       max-width: 1050px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .trust-inner span::before {
+      content: "✓";
+      color: #8b9d87;
+      margin-right: 9px;
+      font-size: 15px;
+    }
+
+    .section {
+      padding: 75px 24px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .gallery-card {
-      background: #fff;
-      border: 1px solid #e4e5df;
-      border-radius: 7px;
-      overflow: hidden;
-      box-shadow: 0 5px 18px rgba(37, 43, 40, 0.05);
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 37px;
     }
 
-    .gallery-photo {
-      min-height: 230px;
-      background: #e9eee8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      color: #687169;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-
-    .gallery-photo img {
-      display: block;
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .gallery-caption {
-      padding: 20px 22px 23px;
-    }
-
-    .gallery-caption h3 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 17px;
-      color: #35483d;
-      margin-bottom: 7px;
-    }
-
-    .gallery-caption p {
-      color: #687169;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .gallery-contact {
-      max-width: 760px;
-      margin: 45px auto 0;
-      text-align: center;
-      padding: 28px 20px;
-      background: #e9eee8;
-      border-radius: 7px;
-    }
-
-    .gallery-contact h3 {
-      color: #35483d;
+    .section-heading .eyebrow {
+      color: #788773;
       margin-bottom: 10px;
     }
 
-    .gallery-contact a {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 22px;
-      background: #35483d;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      letter-spacing: 0.5px;
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--green);
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 15px;
     }
 
-    .gallery-contact a:hover {
-      background: #252b28;
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
     }
 
-    @media (max-width: 650px) {
-      .gallery-grid {
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      margin-bottom: 17px;
+    }
+
+    .about-copy strong {
+      color: var(--green);
+    }
+
+    .promise {
+      background: var(--pale-sage);
+      padding: 30px;
+      border-left: 4px solid var(--sage);
+      border-radius: 0 5px 5px 0;
+    }
+
+    .promise h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--green);
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .promise p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .services-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 27px 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(37,43,40,.07);
+    }
+
+    .service-number {
+      color: #879887;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      font-size: 17px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .personal-section {
+      background: var(--pale-sage);
+    }
+
+    .personal-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .personal-quote {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.3;
+    }
+
+    .personal-copy p {
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .personal-copy strong {
+      color: var(--green);
+    }
+
+    .gallery-callout {
+      background: var(--charcoal);
+      color: white;
+      padding: 45px 25px;
+    }
+
+    .gallery-callout-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .gallery-callout h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 3.5vw, 35px);
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 9px;
+    }
+
+    .gallery-callout p {
+      color: #d8dfd7;
+      font-size: 14px;
+    }
+
+    .contact-section {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 65px 24px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .contact-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .contact-section .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .contact-section h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 17px;
+    }
+
+    .contact-section p {
+      color: #e0e5df;
+      margin-bottom: 15px;
+    }
+
+    .contact-details {
+      margin-top: 23px;
+      color: #e4cb97;
+      font-weight: 700;
+    }
+
+    .contact-section .button {
+      margin-top: 12px;
+    }
+
+    .site-footer {
+      background: var(--charcoal);
+      color: #c8d0c8;
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .site-footer .family-note {
+      max-width: 650px;
+      margin: 0 auto 16px;
+      color: #aeb7ae;
+      font-size: 12px;
+    }
+
+    .site-footer .family-note strong {
+      color: #e4cb97;
+    }
+
+    .site-footer img {
+      width: 85px;
+      max-width: 40%;
+      height: auto;
+      margin: 0 auto 12px;
+      display: block;
+    }
+
+    .site-footer .copyright {
+      color: #929a93;
+      margin-top: 14px;
+      font-size: 11px;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner,
+      .about-grid,
+      .personal-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero {
+        padding: 62px 22px;
+      }
+
+      .hero-note {
+        justify-self: start;
+        max-width: 520px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery-callout-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section {
+        padding: 55px 20px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .brand {
+        letter-spacing: 2px;
+      }
+
+      .site-nav {
+        gap: 8px 17px;
+      }
+
+      .site-nav a {
+        font-size: 11px;
+      }
+
+      .hero h2 {
+        font-size: 39px;
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .service-grid {
         grid-template-columns: 1fr;
       }
 
-      .gallery-photo img {
-        height: 240px;
+      .promise {
+        padding: 23px;
       }
 
-      .gallery {
-        padding: 38px 16px 48px;
+      .trust-inner {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .gallery-callout {
+        padding: 35px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
       }
     }
   </style>
@@ -134,96 +556,262 @@
 
 <body>
 
-<header>
-  <h1>GB GOLF CARTS</h1>
-  <p class="subtitle">Honest Hands-On Service • Gordon's Bay</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="album.html">Our Work</a>
-    <a href="index.html#contact">Contact Willie</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <h1 class="brand">GB GOLF CARTS</h1>
+    <p class="tagline">Honest advice. Quality work. Personal service.</p>
 
-<main>
-  <section class="gallery">
-    <div class="gallery-intro">
-      <h2>Our Work – Before & After</h2>
-      <p>
-        Every cart has a story. From repairs and refurbishments to custom
-        builds, we take pride in the work we do.
-      </p>
-      <p>
-        Take a look at our projects and the practical, hands-on service
-        GB Golfcarts is known for.
-      </p>
-    </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="album.html">Our Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Willie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <div class="gallery-grid">
+  <main>
 
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Before refurbishment</span>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Gordon's Bay · Western Cape</p>
+
+          <h2>Good work.<br>Honest advice.<br><span>Carts cared for properly.</span></h2>
+
+          <p class="hero-copy">
+            Need a repair, a part, a fresh new look for your golf cart,
+            or someone reliable to look after it? Willie believes in doing
+            the job properly, giving straight answers and treating every
+            customer with personal care.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-gold" href="#services">See What We Do</a>
+            <a class="button button-outline" href="album.html">Our Work</a>
+          </div>
         </div>
-        <div class="gallery-caption">
-          <h3>Before Refurbishment</h3>
-          <p>Golf carts assessed and prepared for restoration and improvement.</p>
-        </div>
-      </article>
 
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Completed refurbishment</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Refurbished Carts</h3>
-          <p>Giving used golf carts a new lease on life with careful workmanship.</p>
-        </div>
-      </article>
+        <aside class="hero-note">
+          <strong>It's not just about the cart. It's about getting the job done right.</strong>
+          <p>
+            Practical know-how, careful workmanship and honest advice —
+            without cutting corners.
+          </p>
+        </aside>
+      </div>
+    </section>
 
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Custom build or spray work</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Custom Builds & Spray Work</h3>
-          <p>Custom finishes, bodywork and upgrades to suit each cart and owner.</p>
-        </div>
-      </article>
+    <section class="trust-strip" aria-label="Our approach">
+      <div class="trust-inner">
+        <span>Personal attention</span>
+        <span>Quality workmanship</span>
+        <span>Honest advice</span>
+        <span>After-service care</span>
+      </div>
+    </section>
 
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Batteries, wiring or repairs</span>
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">A hands-on business</p>
+          <h2>You deal with a real person who cares about the work.</h2>
+          <p>
+            At GB Golf Carts, we believe good service starts with listening,
+            understanding the problem and finding a sensible solution.
+          </p>
         </div>
-        <div class="gallery-caption">
-          <h3>Repairs & Upgrades</h3>
-          <p>From electrical work to battery upgrades and general maintenance.</p>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              Willie is a practical, hands-on problem solver who takes pride
+              in doing things properly. He doesn't believe in cutting corners
+              just to get a job out the door.
+            </p>
+
+            <p>
+              If something can be fixed, improved or restored, he'll look at
+              the options and work out a sensible way forward. If a job falls
+              outside his expertise, he'll tell you honestly and point you
+              in the right direction.
+            </p>
+
+            <p>
+              Customers come back because they value <strong>reliable work,
+              straightforward answers and personal service</strong> — not
+              empty promises.
+            </p>
+          </div>
+
+          <aside class="promise">
+            <h3>Our way of doing business</h3>
+            <p>
+              We look for good-quality parts at sensible prices, including
+              sourcing options locally and internationally when needed.
+              Experience and a strong network help us tackle problems that
+              aren't always straightforward.
+            </p>
+            <p style="margin-top: 14px;">
+              And when the work is done, we want you to feel comfortable
+              coming back if you need help again.
+            </p>
+          </aside>
         </div>
-      </article>
+      </div>
+    </section>
 
-    </div>
+    <section class="section services-section" id="services">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">How we can help</p>
+          <h2>From a small repair to a full refresh.</h2>
+          <p>
+            Every cart and every job is different. Tell Willie what you need
+            and he'll help you work out the next step.
+          </p>
+        </div>
 
-    <div class="gallery-contact">
-      <h3>Have a golf cart that needs attention?</h3>
-      <p>Contact Willie to discuss servicing, refurbishment or a custom project.</p>
-      <a href="index.html#contact">Contact GB Golfcarts</a>
-    </div>
-  </section>
-</main>
+        <div class="service-grid">
 
-<footer class="truter-footer">
-  <img src="truter-final.jpg" alt="Truter family coat of arms" class="truter-wapen">
-  <div class="truter-story">
-    <strong>500 Jaar Familie Geskiedenis</strong><br>
-    Van Osterode am Harz 1530, via die Kompanjetuin Kaapstad 1713,
-    tot Gordon's Bay Golfcarts.<br>
-    <em>Honest hands-on service.</em>
-  </div>
-  <div class="truter-datum">
-    OSTERODE 1530 • KOMPANJETUIN 1713 • GB GOLFCARTS 2005
-  </div>
-  <div class="truter-motto">UNICUIQUE SUUM – Aan elkeen sy eie</div>
-  <div class="copy">GB Golfcarts • Gordon's Bay, South Africa</div>
-</footer>
+          <article class="service-card">
+            <p class="service-number">01</p>
+            <h3>Repairs & Maintenance</h3>
+            <p>
+              Practical help with golf cart problems, servicing and general
+              maintenance to keep your cart in good working order.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">02</p>
+            <h3>Parts & Sourcing</h3>
+            <p>
+              Help finding suitable parts, with a focus on quality,
+              availability and getting value for your money.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">03</p>
+            <h3>Refurbishments & Restorations</h3>
+            <p>
+              Give an older cart a new lease on life with careful work
+              focused on improving its condition and appearance.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">04</p>
+            <h3>Custom Work & Upgrades</h3>
+            <p>
+              Discuss the changes, finishes or upgrades you have in mind.
+              Willie can help assess what's practical for your cart.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">05</p>
+            <h3>Collection & Delivery</h3>
+            <p>
+              Collection and delivery can be discussed when arranging
+              your cart's work. Please confirm the details with Willie.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-number">06</p>
+            <h3>Golf Cart Sitting</h3>
+            <p>
+              Away for an extended period? Ask Willie about having your
+              golf cart looked after while you're overseas.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section personal-section">
+      <div class="section-inner personal-grid">
+        <div class="personal-quote">
+          “If I can help, I'll do my best. If I can't, I'll tell you straight.”
+        </div>
+
+        <div class="personal-copy">
+          <div class="section-heading">
+            <p class="eyebrow">The personal difference</p>
+            <h2>You're not just another job number.</h2>
+          </div>
+
+          <p>
+            Golf carts can be simple one day and surprisingly complicated
+            the next. Experience matters — but so does taking the time to
+            understand what is actually wrong.
+          </p>
+
+          <p>
+            Willie takes a hands-on approach, keeps looking for solutions
+            and believes that <strong>good customer service should continue
+            after the work is finished.</strong>
+          </p>
+
+          <p>
+            That's the kind of relationship GB Golf Carts aims to build:
+            honest, dependable and personal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-callout">
+      <div class="gallery-callout-inner">
+        <div>
+          <h2>Want to see what we've been working on?</h2>
+          <p>
+            Visit our gallery for project photos as they become available.
+          </p>
+        </div>
+
+        <a class="button button-gold" href="album.html">Visit Our Work & Gallery</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow">Let's talk about your golf cart</p>
+        <h2>Have a question or a cart that needs attention?</h2>
+        <p>
+          Whether it's a repair, a part, a refurbishment or golf cart sitting,
+          start with a conversation. Explain what you need and Willie will
+          help you work out the next step.
+        </p>
+        <p class="contact-details">
+          GB Golf Carts · Gordon's Bay, Western Cape
+        </p>
+        <p>
+          Contact Willie using the business's usual phone or WhatsApp details.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <img src="truter-final.jpg" alt="Truter family coat of arms">
+
+    <p class="family-note">
+      <strong>500 Years of Family History</strong><br>
+      From Osterode am Harz in 1530, via the Company's Garden in Cape Town
+      in 1713, to Gordon's Bay Golf Carts.<br>
+      <em>Unicuique Suum — To each his own.</em>
+    </p>
+
+    <p>GB Golf Carts · Gordon's Bay, South Africa</p>
+
+    <p class="copyright">
+      Honest hands-on service.
+    </p>
+  </footer>
 
 </body>
 </html>
