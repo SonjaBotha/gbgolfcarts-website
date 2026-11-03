@@ -92,16 +92,35 @@
       border-bottom-color: var(--gold);
     }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse at 85% 20%, rgba(198,167,107,.18), transparent 35%),
-        linear-gradient(125deg, #35483d 0%, #26372e 62%, #202923 100%);
-      color: white;
-      padding: 85px 24px 90px;
-    }
+.site-nav .nav-logo {
+  border-bottom: none;
+  padding: 0;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
 
+.site-nav .nav-logo img {
+  height: 48px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+.site-nav .nav-logo:hover {
+  border-bottom: none;
+}
+
+    .hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(35,52,43,.72), rgba(35,52,43,.72)),
+    url("gbgolfcarts-voorblad.jpg") center center / cover no-repeat;
+  color: white;
+  padding: 85px 24px 90px;
+}
     .hero-inner {
       max-width: 1120px;
       margin: 0 auto;
@@ -656,13 +675,18 @@
     <h1 class="brand">GB GOLF CARTS</h1>
     <p class="tagline">Honest advice. Quality work. Personal service.</p>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="album.html">Our Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About Willie</a>
-      <a href="#contact">Contact</a>
-    </nav>
+   
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="GB Golf Carts Home">
+    <img src="gbgc-logo.png" alt="GB Golf Carts">
+  </a>
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="album.html">Our Work</a>
+  <a href="#services">Services</a>
+  <a href="#about">About Willie</a>
+  <a href="#contact">Contact</a>
+</nav>
+
   </header>
 
   <main>
