@@ -68,6 +68,50 @@
       letter-spacing: 0.5px;
     }
 
+.brand-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 125px;
+  height: auto;
+  max-height: 125px;
+  object-fit: contain;
+}
+
+.brand-text {
+  grid-column: 2;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .brand-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .header-logo {
+    justify-content: center;
+  }
+
+  .header-logo img {
+    width: 105px;
+  }
+
+  .brand-text {
+    grid-column: 1;
+  }
+}
     .site-nav {
       display: flex;
       flex-wrap: wrap;
