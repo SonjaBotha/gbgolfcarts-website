@@ -33,30 +33,7 @@
       scroll-behavior: smooth;
       scroll-padding-top: 25px;
     }
-
-    <button id="backToTop" aria-label="Back to top" title="Back to top">
-  ↑
-</button>
-
-<script>
-  const backToTop = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
-
-  backToTop.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
-    
+        
     body {
       background: var(--cream);
       color: var(--text);
@@ -584,59 +561,60 @@
       }
     }
 
-    @media (max-width: 540px) {
-      .brand {
-        letter-spacing: 2px;
-      }
+   @media (max-width: 540px) {
+  .brand {
+    letter-spacing: 2px;
+  }
 
-      .site-nav {
-        gap: 8px 17px;
-      }
+  .site-nav {
+    gap: 8px 17px;
+  }
 
-      .site-nav a {
-        font-size: 11px;
-      }
+  .site-nav a {
+    font-size: 11px;
+  }
 
-      .hero h2 {
-        font-size: 39px;
-      }
+  .hero h2 {
+    font-size: 39px;
+  }
 
-      .hero-copy {
-        font-size: 15px;
-      }
+  .hero-copy {
+    font-size: 15px;
+  }
 
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .promise {
-        padding: 23px;
-      }
+  .promise {
+    padding: 23px;
+  }
 
-      .trust-inner {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 300px;
-        margin: 0 auto;
-      }
+  .trust-inner {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
-      .gallery-callout {
-        padding: 35px 20px;
-      }
+  .gallery-callout {
+    padding: 35px 20px;
+  }
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
-    }
-    
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -647,7 +625,7 @@
 }
 
 .contact-column h3 {
- color: var(--green);
+  color: var(--green);
   margin-bottom: 18px;
 }
 
@@ -685,7 +663,6 @@
   font-size: 0.9rem;
 }
 
-
 .whatsapp-button {
   display: inline-flex;
   flex-direction: column;
@@ -707,13 +684,15 @@
   border-radius: 50%;
   background: #25D366;
   color: white;
+  display: block;
+  flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
 .whatsapp-button:hover svg {
   transform: scale(1.08);
 }
-    
+
 @media (max-width: 700px) {
   .contact-layout {
     grid-template-columns: 1fr;
@@ -728,7 +707,9 @@
   .contact-column {
     text-align: center;
   }
-  #backToTop {
+}
+
+#backToTop {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -752,7 +733,6 @@
 #backToTop:hover {
   background: var(--gold);
 }
-
   </style>
 </head>
 
@@ -1081,6 +1061,27 @@
       Honest hands-on service.
     </p>
   </footer>
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+  ↑
+</button>
 
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 </body>
 </html>
