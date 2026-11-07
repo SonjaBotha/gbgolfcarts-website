@@ -30,6 +30,40 @@
       line-height: 1.7;
     }
 
+    /* HEADER: Logo links, skryf + menu in middel - soos Index */
+    .site-header {
+      text-align: center !important;
+      padding: 18px 22px 16px !important;
+    }
+    .brand-layout {
+      max-width: 1120px;
+      margin: 0 auto !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-start !important;
+      gap: 0;
+      text-align: center;
+    }
+    .header-logo {
+      flex-shrink: 0;
+    }
+    .header-logo img {
+      width: 110px;
+      height: auto;
+      display: block;
+    }
+    .brand-text {
+      flex: 1;
+      text-align: center;
+      margin-left: -110px;
+    }
+    .site-nav {
+      max-width: 1120px;
+      margin: 18px auto 0 !important;
+      justify-content: center !important;
+      text-align: center;
+    }
+
     .hero {
       min-height: 300px;
       display: flex;
@@ -161,6 +195,7 @@
       .topics { grid-template-columns: 1fr; }
       .hero { min-height: 260px; }
       main { padding: 42px 16px 52px; }
+      .brand-text { margin-left: 0; }
     }
 
     .workshop-story {
@@ -218,24 +253,6 @@
       text-align: center;
       font-style: italic;
     }
-    /* FIX: Force header logo left like on Home */
-.site-header {
-  text-align: left !important;
-}
-.brand-layout {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 18px;
-  text-align: left;
-}
-.site-nav {
-  justify-content: flex-start !important;
-  max-width: 1120px;
-  margin: 18px auto 0;
-}
   </style>
 </head>
 
@@ -272,6 +289,50 @@
   </section>
 
   <main>
+    <!-- LITHIUM STORIE IS NOU HIER - DIREK ONDER HERO -->
+    <article class="workshop-story">
+      <p class="eyebrow">Willie's Tips · Batteries</p>
+      <h2>Should You Switch to Lithium Batteries?</h2>
+      <p class="story-meta">By Willie · From the Workshop</p>
+
+      <p><strong>Everyone is asking me about lithium batteries at the moment.</strong></p>
+      <p>And I understand why. They are lighter, they last longer, and you don't have to check water levels or clean acid off the terminals.</p>
+      <p>But they are also expensive. So let me tell you honestly when it makes sense — and when it doesn't.</p>
+
+      <h3>What I like about lithium</h3>
+      <ul>
+        <li><strong>Lighter:</strong> Your cart feels completely different. Less weight means it pulls better, especially uphill.</li>
+        <li><strong>Longer life:</strong> A good lithium set can last 8 to 10 years if you look after it. Lead-acid usually gives you 3 to 4 years.</li>
+        <li><strong>No maintenance:</strong> No water, no acid, no cleaning terminals every month.</li>
+        <li><strong>More consistent power:</strong> It doesn't go flat halfway up the hill like an old lead-acid set does.</li>
+      </ul>
+
+      <h3>What you must know before you switch</h3>
+      <p>This is the part most adverts don't tell you:</p>
+      <ul>
+        <li><strong>It costs more upfront.</strong> Yes, you save in the long run, but you must be ready for that first bill.</li>
+        <li><strong>You need the right charger.</strong> You cannot just put a lithium battery on your old lead-acid charger. That is how people damage a brand new set in the first month.</li>
+        <li><strong>Not all lithium is the same.</strong> I have seen cheap imports with no proper BMS — that's the brain that protects the battery. Without it, you have problems.</li>
+        <li><strong>Your cart must be checked first.</strong> If your wiring, controller or motor is already struggling, a new battery won't fix it. It will just hide the problem for a while.</li>
+      </ul>
+
+      <h3>So, should you do it?</h3>
+      <p>Here is my honest rule:</p>
+      <p><strong>If you use your cart almost every day, and you plan to keep it for 5 years or more — yes, lithium is worth it.</strong></p>
+      <p><strong>If you only use your cart once a month for a round of golf, and your lead-acid batteries are still good — keep them.</strong> Don't spend money you don't need to spend.</p>
+
+      <div class="willie-quote">
+        <p>"Don't buy a battery because of an advert. Bring your cart in, let me test what you have, and then we decide together what makes sense for you."</p>
+        <p><strong>— Willie</strong></p>
+      </div>
+
+      <p>If you are thinking about switching, bring your cart in. I will test your old batteries, check your charger, and tell you straight if lithium is right for you — or if you are better off waiting.</p>
+
+      <div class="contact-cta">
+        <a href="index.html#contact">Ask Willie About Lithium</a>
+      </div>
+    </article>
+
     <section class="intro">
       <h2>More than just golf carts</h2>
       <p>Every cart that comes into the workshop has its own story. Some need a little attention, others need a complete new lease on life, and some arrive with an unusual problem that needs a practical solution.</p>
@@ -286,4 +347,68 @@
 
       <article class="topic">
         <h3>Before &amp; After</h3>
-        <p>Follow selected refurb
+        <p>Follow selected refurbishments, restorations and custom projects from the first assessment to the finished cart.</p>
+      </article>
+
+      <article class="topic">
+        <h3>Willie's Tips</h3>
+        <p>Straightforward advice on maintenance, batteries, repairs and getting the best from your golf cart.</p>
+      </article>
+
+      <article class="topic">
+        <h3>Parts &amp; Advice</h3>
+        <p>Honest advice on parts and maintenance — when to spend, when to save, and when to leave it alone.</p>
+      </article>
+    </section>
+
+    <section class="first-story">
+      <p class="eyebrow">Next up</p>
+      <h2>Coming next: Before &amp; After</h2>
+      <p>Our next story will follow a real refurbishment from the first assessment to the finished cart. Photos and details coming soon.</p>
+      <div class="contact-cta">
+        <a href="index.html#contact">Get in touch with Willie</a>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <img src="truter-final.jpg" alt="Truter family coat of arms">
+
+  <p class="family-note">
+    <strong>500 Years of Family History</strong><br>
+    From Osterode am Harz in 1530, via the Company's Garden in Cape Town
+    in 1713, to Gordon's Bay Golf Carts.<br>
+    <em>Unicuique Suum — To each his own.</em>
+  </p>
+
+  <p>GB Golf Carts · Gordon's Bay, South Africa</p>
+
+  <p class="copyright">
+    Honest hands-on service.
+  </p>
+</footer>
+
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+  ↑
+</button>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+</html>
