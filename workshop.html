@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Workshop stories, golf cart projects, practical advice and updates from GB Golf Carts in Gordon's Bay, Western Cape.">
   <title>From the Workshop | GB Golf Carts</title>
+  <link rel="stylesheet" href="style.css">
 
   <style>
     :root {
@@ -28,67 +28,6 @@
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.7;
-    }
-
-    .site-header {
-      background: #fff;
-      padding: 18px 22px 16px;
-      text-align: center;
-      border-bottom: 1px solid #e4e5df;
-    }
-
-    .header-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-    }
-
-    .site-logo {
-      width: 88px;
-      height: 72px;
-      object-fit: contain;
-    }
-
-    .brand h1 {
-      margin: 0;
-      color: var(--green);
-      font-size: clamp(25px, 4vw, 34px);
-      letter-spacing: 2px;
-      line-height: 1.2;
-    }
-
-    .brand p {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      letter-spacing: 1.3px;
-    }
-
-    .site-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px 27px;
-      margin: 18px auto 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .site-nav a {
-      color: var(--green);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .3px;
-    }
-
-    .site-nav a:hover,
-    .site-nav a[aria-current="page"] {
-      color: #9b7b43;
     }
 
     .hero {
@@ -152,7 +91,7 @@
 
     .topics {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
       max-width: 1050px;
       margin: 0 auto 48px;
@@ -218,46 +157,72 @@
 
     .contact-cta a:hover { background: var(--charcoal); }
 
-    .site-footer {
-      padding: 25px 20px;
-      background: var(--charcoal);
-      color: #f7f5ef;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-    }
-
-    .site-footer p { margin: 4px 0; }
-
-    #backToTop {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      display: none;
-      width: 46px;
-      height: 46px;
-      border: 0;
-      border-radius: 50%;
-      background: var(--green);
-      color: #fff;
-      font-size: 26px;
-      cursor: pointer;
-      z-index: 999;
-      box-shadow: 0 3px 10px rgba(0,0,0,.22);
-    }
-
-    #backToTop.show { display: block; }
-    #backToTop:hover { background: var(--gold); }
-
     @media (max-width: 760px) {
       .topics { grid-template-columns: 1fr; }
-      .header-inner { flex-direction: column; gap: 7px; }
-      .site-nav { gap: 10px 17px; }
       .hero { min-height: 260px; }
       main { padding: 42px 16px 52px; }
     }
+
+    .workshop-story {
+      max-width: 780px;
+      margin: 0 auto 50px;
+      background: #fff;
+      padding: 35px 30px;
+      border: 1px solid #e4e5df;
+      border-radius: 8px;
+    }
+
+    .workshop-story .eyebrow { color: #7a6237; }
+
+    .workshop-story h2 {
+      color: #35483d;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.25;
+      margin: 5px 0 5px;
+    }
+
+    .story-meta {
+      color: #687169;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .story-photo {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin: 15px 0 20px;
+      background: #e9eee8;
+    }
+
+    .workshop-story h3 {
+      color: #35483d;
+      margin-top: 28px;
+    }
+
+    .workshop-story ul {
+      padding-left: 20px;
+    }
+
+    .workshop-story li {
+      margin-bottom: 10px;
+      color: #353b37;
+    }
+
+    .willie-quote {
+      background: #e9eee8;
+      padding: 22px 24px;
+      border-radius: 7px;
+      margin: 30px 0;
+      text-align: center;
+      font-style: italic;
+    }
   </style>
 </head>
+
+<body>
+
 <header class="site-header">
   <div class="brand-layout">
     <a href="index.html" class="header-logo">
@@ -297,70 +262,10 @@
 
     <section class="topics" aria-label="What you'll find here">
       <article class="topic">
-        <h3>Before &amp; After</h3>
-        <p>Follow selected refurbishments, restorations and custom projects from the first assessment to the finished cart.</p>
-      </article>
-
-      <article class="topic">
-        <h3>Willie's Tips</h3>
-        <p>Straightforward advice on maintenance, batteries, repairs and getting the best from your golf cart.</p>
-      </article>
-
-      <article class="topic">
         <h3>Workshop Updates</h3>
-        <p>See what has been happening in the workshop and discover some of the solutions behind the finished work.</p>
+        <p>What is happening in the workshop right now — the carts we are working on and the problems we are solving.</p>
       </article>
-    </section>
 
-    <section class="first-story">
-      <p class="eyebrow">Coming soon</p>
-      <h2>Our first workshop story is on its way</h2>
-      <p>We're getting the photos and details together for our first project feature. In the meantime, if your golf cart needs attention or you'd like to discuss an idea, Willie would be happy to hear from you.</p>
-      <div class="contact-cta">
-        <a href="index.html#contact">Get in touch with Willie</a>
-      </div>
-    </section>
-  </main>
-
- <footer class="site-footer">
-  <img src="truter-final.jpg" alt="Truter family coat of arms">
-
-  <p class="family-note">
-    <strong>500 Years of Family History</strong><br>
-    From Osterode am Harz in 1530, via the Company's Garden in Cape Town
-    in 1713, to Gordon's Bay Golf Carts.<br>
-    <em>Unicuique Suum — To each his own.</em>
-  </p>
-
-  <p>GB Golf Carts · Gordon's Bay, South Africa</p>
-
-  <p class="copyright">
-    Honest hands-on service.
-  </p>
-</footer>
-
-<button id="backToTop" aria-label="Back to top" title="Back to top">
-  ↑
-</button>
-
-<script>
-  const backToTop = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
-
-  backToTop.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
-</body>
-</html>
-
+      <article class="topic">
+        <h3>Before &amp; After</h3>
+        <p>Follow selected refurb
