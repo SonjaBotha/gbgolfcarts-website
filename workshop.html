@@ -258,8 +258,7 @@
     }
   </style>
 </head>
-
-<body><header class="site-header">
+<header class="site-header">
   <div class="brand-layout">
     <a href="index.html" class="header-logo">
       <img src="gbgc-logo.png" alt="GB Golf Carts">
@@ -272,12 +271,12 @@
   </div>
 
   <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html" aria-current="page">Home</a>
+    <a href="index.html">Home</a>
     <a href="album.html">Our Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About Willie</a>
-    <a href="workshop.html">From the Workshop</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About Willie</a>
+    <a href="workshop.html" aria-current="page">From the Workshop</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
 
@@ -323,23 +322,45 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p><strong>GB Golf Carts</strong> · Gordon's Bay, Western Cape</p>
-    <p>Honest hands-on service.</p>
-    <p>© GB Golf Carts</p>
-  </footer>
+ <footer class="site-footer">
+  <img src="truter-final.jpg" alt="Truter family coat of arms">
 
-  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
-  <script>
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 300) backToTop.classList.add("show");
-      else backToTop.classList.remove("show");
+  <p class="family-note">
+    <strong>500 Years of Family History</strong><br>
+    From Osterode am Harz in 1530, via the Company's Garden in Cape Town
+    in 1713, to Gordon's Bay Golf Carts.<br>
+    <em>Unicuique Suum — To each his own.</em>
+  </p>
+
+  <p>GB Golf Carts · Gordon's Bay, South Africa</p>
+
+  <p class="copyright">
+    Honest hands-on service.
+  </p>
+</footer>
+
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+  ↑
+</button>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
-    backToTop.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
 
