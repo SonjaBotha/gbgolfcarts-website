@@ -134,17 +134,28 @@
 
 <body>
 
-<header>
-  <h1>GB GOLF CARTS</h1>
-  <p class="subtitle">Honest Hands-On Service • Gordon's Bay</p>
-  <nav>
+<header class="site-header">
+  <div class="brand-layout">
+    <a href="index.html" class="header-logo">
+      <img src="gbgc-logo.png" alt="GB Golf Carts">
+    </a>
+
+    <div class="brand-text">
+      <h1 class="brand">GB GOLF CARTS</h1>
+      <p class="tagline">Honest advice. Quality work. Personal service.</p>
+    </div>
+  </div>
+
+  <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="album.html">Our Work</a>
-    <a href="workshop.html">From the Workshop</a>
-    <a href="index.html#contact">Contact Willie</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About Willie</a>
+    <a href="workshop.html" aria-current="page">From the Workshop</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
-
+  
 <main>
   <section class="gallery">
     <div class="gallery-intro">
@@ -211,20 +222,44 @@
   </section>
 </main>
 
-<footer class="truter-footer">
-  <img src="truter-final.jpg" alt="Truter family coat of arms" class="truter-wapen">
-  <div class="truter-story">
-    <strong>500 Jaar Familie Geskiedenis</strong><br>
-    Van Osterode am Harz 1530, via die Kompanjetuin Kaapstad 1713,
-    tot Gordon's Bay Golfcarts.<br>
-    <em>Honest hands-on service.</em>
-  </div>
-  <div class="truter-datum">
-    OSTERODE 1530 • KOMPANJETUIN 1713 • GB GOLFCARTS 2005
-  </div>
-  <div class="truter-motto">UNICUIQUE SUUM – Aan elkeen sy eie</div>
-  <div class="copy">GB Golfcarts • Gordon's Bay, South Africa</div>
+<footer class="site-footer">
+  <img src="truter-final.jpg" alt="Truter family coat of arms">
+
+  <p class="family-note">
+    <strong>500 Years of Family History</strong><br>
+    From Osterode am Harz in 1530, via the Company's Garden in Cape Town
+    in 1713, to Gordon's Bay Golf Carts.<br>
+    <em>Unicuique Suum — To each his own.</em>
+  </p>
+
+  <p>GB Golf Carts · Gordon's Bay, South Africa</p>
+
+  <p class="copyright">
+    Honest hands-on service.
+  </p>
 </footer>
 
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+  ↑
+</button>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 </body>
 </html>
