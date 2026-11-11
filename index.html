@@ -733,6 +733,51 @@
 #backToTop:hover {
   background: var(--gold);
 }
+
+/* SERVICES – small icons beside headings */
+
+.service-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.service-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #087344;
+  font-size: 30px;
+}
+
+.service-card-heading h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.service-card > p {
+  margin: 12px 0 0 56px;
+}
+
+/* Small golf flags in the trust strip */
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-flag {
+  width: 22px;
+  height: 26px;
+  flex: 0 0 22px;
+  color: #087344;
+}
+
+
   </style>
 </head>
 
@@ -852,76 +897,89 @@
       </div>
     </section>
 
-    <section class="section services-section" id="services">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="eyebrow">How we can help</p>
-          <h2>From a small repair to a full refresh.</h2>
-          <p>
-            Every cart and every job is different. Tell Willie what you need
-            and he'll help you work out the next step.
-          </p>
+    
+<section class="section services-section" id="services">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">How we can help</p>
+      <h2>From a small repair to a full refresh.</h2>
+      <p>
+        Every cart and every job is different. Tell Willie what you need
+        and he'll help you work out the next step.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">🔧</span>
+          <h3>Repairs & Maintenance</h3>
         </div>
+        <p>
+          Practical help with golf cart problems, servicing and general
+          maintenance to keep your cart in good working order.
+        </p>
+      </article>
 
-        <div class="service-grid">
-
-          <article class="service-card">
-            <p class="service-number">01</p>
-            <h3>Repairs & Maintenance</h3>
-            <p>
-              Practical help with golf cart problems, servicing and general
-              maintenance to keep your cart in good working order.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <p class="service-number">02</p>
-            <h3>Parts & Sourcing</h3>
-            <p>
-              Help finding suitable parts, with a focus on quality,
-              availability and getting value for your money.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <p class="service-number">03</p>
-            <h3>Refurbishments & Restorations</h3>
-            <p>
-              Give an older cart a new lease on life with careful work
-              focused on improving its condition and appearance.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <p class="service-number">04</p>
-            <h3>Custom Work & Upgrades</h3>
-            <p>
-              Discuss the changes, finishes or upgrades you have in mind.
-              Willie can help assess what's practical for your cart.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <p class="service-number">05</p>
-            <h3>Collection & Delivery</h3>
-            <p>
-              Collection and delivery can be discussed when arranging
-              your cart's work. Please confirm the details with Willie.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <p class="service-number">06</p>
-            <h3>Golf Cart Sitting</h3>
-            <p>
-              Away for an extended period? Ask Willie about having your
-              golf cart looked after while you're overseas.
-            </p>
-          </article>
-
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">⚙</span>
+          <h3>Parts & Sourcing</h3>
         </div>
-      </div>
-    </section>
+        <p>
+          Help finding suitable parts, with a focus on quality,
+          availability and getting value for your money.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">🛠</span>
+          <h3>Refurbishments & Restorations</h3>
+        </div>
+        <p>
+          Give an older cart a new lease on life with careful work
+          focused on improving its condition and appearance.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">🔩</span>
+          <h3>Custom Work & Upgrades</h3>
+        </div>
+        <p>
+          Discuss the changes, finishes or upgrades you have in mind.
+          Willie can help assess what's practical for your cart.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">🚚</span>
+          <h3>Collection & Delivery</h3>
+        </div>
+        <p>
+          Collection and delivery can be discussed when arranging
+          your cart's work. Please confirm the details with Willie.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-heading">
+          <span class="service-icon" aria-hidden="true">⛳</span>
+          <h3>Golf Cart Sitting</h3>
+        </div>
+        <p>
+          Away for an extended period? Ask Willie about having your
+          golf cart looked after while you're overseas.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <section class="section personal-section">
       <div class="section-inner personal-grid">
@@ -1002,7 +1060,6 @@
         <p><strong>Phone</strong><br>
           <a href="tel:+27218561236">+27 (0)21 856 1236</a>
         </p>
-
         
 <a class="whatsapp-button"
    href="https://wa.me/27849892452?text=Hi%20Willie%2C%20I%20would%20like%20to%20enquire%20about%20GB%20Golf%20Carts."
