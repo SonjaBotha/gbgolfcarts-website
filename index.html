@@ -833,7 +833,22 @@
   object-fit: contain;
   display: block;
 }
-  </style>
+    
+/* Small golf flags in trust strip */
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-item img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+  display: block;
+}
+
 </head>
 
 <body>
@@ -893,14 +908,33 @@
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Our approach">
-      <div class="trust-inner">
-        <span>Personal attention</span>
-        <span>Quality workmanship</span>
-        <span>Honest advice</span>
-        <span>After-service care</span>
-      </div>
-    </section>
+    
+<section class="trust-strip" aria-label="Our approach">
+  <div class="trust-inner">
+
+    <span class="trust-item">
+      <img src="golf-flag.png" alt="">
+      Personal attention
+    </span>
+
+    <span class="trust-item">
+      <img src="golf-flag.png" alt="">
+      Quality workmanship
+    </span>
+
+    <span class="trust-item">
+      <img src="golf-flag.png" alt="">
+      Honest advice
+    </span>
+
+    <span class="trust-item">
+      <img src="golf-flag.png" alt="">
+      After-service care
+    </span>
+
+  </div>
+</section>
+
 
     <section class="section" id="about">
       <div class="section-inner">
