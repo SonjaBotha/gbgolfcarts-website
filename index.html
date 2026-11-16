@@ -848,6 +848,36 @@
   object-fit: contain;
   display: block;
 }
+    
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-photo {
+  margin: 0;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 380px;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-photo figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 </style>
 </head>
 
@@ -947,27 +977,57 @@
           </p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-copy">
-            <p>
-              Willie is a practical, hands-on problem solver who takes pride
-              in doing things properly. He doesn't believe in cutting corners
-              just to get a job out the door.
-            </p>
+        
+<div class="about-grid">
 
-            <p>
-              If something can be fixed, improved or restored, he'll look at
-              the options and work out a sensible way forward. If a job falls
-              outside his expertise, he'll tell you honestly and point you
-              in the right direction.
-            </p>
+  <!-- LEFT: WILLIE'S STORY -->
+  <div class="about-copy">
+    <p>
+      Willie is a practical, hands-on problem solver who takes pride
+      in doing things properly. He doesn't believe in cutting corners
+      just to get a job out the door.
+    </p>
 
-            <p>
-              Customers come back because they value <strong>reliable work,
-              straightforward answers and personal service</strong> — not
-              empty promises.
-            </p>
-          </div>
+    <p>
+      If something can be fixed, improved or restored, he'll look at
+      the options and work out a sensible way forward. If a job falls
+      outside his expertise, he'll tell you honestly and point you
+      in the right direction.
+    </p>
+
+    <p>
+      Customers come back because they value <strong>reliable work,
+      straightforward answers and personal service</strong> — not
+      empty promises.
+    </p>
+  </div>
+
+  <!-- RIGHT: WILLIE'S PHOTO AND BUSINESS PROMISE -->
+  <div class="about-side">
+
+    <figure class="about-photo">
+      <img src="willie-truter.jpg"
+           alt="Willie Truter of GB Golf Carts">
+      <figcaption>Willie Truter</figcaption>
+    </figure>
+
+    <aside class="promise">
+      <h3>Our way of doing business</h3>
+      <p>
+        We look for good-quality parts at sensible prices, including
+        sourcing options locally and internationally when needed.
+        Experience and a strong network help us tackle problems that
+        aren't always straightforward.
+      </p>
+      <p style="margin-top: 14px;">
+        And when the work is done, we want you to feel comfortable
+        coming back if you need help again.
+      </p>
+    </aside>
+
+  </div>
+</div>
+
 
           <aside class="promise">
             <h3>Our way of doing business</h3>
