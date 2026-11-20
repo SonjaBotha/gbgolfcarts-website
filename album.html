@@ -62,6 +62,29 @@
       font-size: 14px;
     }
 
+/* Gallery images */
+.gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Two photos side by side */
+.gallery-photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-photo-pair img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
     .gallery-photo img {
       display: block;
       width: 100%;
@@ -338,49 +361,60 @@
       </p>
     </div>
 
-    <div class="gallery-grid">
+   
+<div class="gallery-grid">
 
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Before refurbishment</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Before Refurbishment</h3>
-          <p>Golf carts assessed and prepared for restoration and improvement.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Completed refurbishment</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Refurbished Carts</h3>
-          <p>Giving used golf carts a new lease on life with careful workmanship.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Custom build or spray work</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Custom Builds & Spray Work</h3>
-          <p>Custom finishes, bodywork and upgrades to suit each cart and owner.</p>
-        </div>
-      </article>
-
-      <article class="gallery-card">
-        <div class="gallery-photo">
-          <span>Photo to be added: Batteries, wiring or repairs</span>
-        </div>
-        <div class="gallery-caption">
-          <h3>Repairs & Upgrades</h3>
-          <p>From electrical work to battery upgrades and general maintenance.</p>
-        </div>
-      </article>
-
+  <!-- 1. BEFORE REFURBISHMENT -->
+  <article class="gallery-card">
+    <div class="gallery-photo">
+      <img src="before-refurbishment.jpg"
+           alt="Golf cart before refurbishment">
     </div>
+    <div class="gallery-caption">
+      <h3>Before Refurbishment</h3>
+      <p>Golf carts assessed and prepared for restoration and improvement.</p>
+    </div>
+  </article>
+
+  <!-- 2. REFURBISHED CARTS -->
+  <article class="gallery-card">
+    <div class="gallery-photo">
+      <img src="after-refurbishment.jpg"
+           alt="Completed golf cart refurbishment">
+    </div>
+    <div class="gallery-caption">
+      <h3>Refurbished Carts</h3>
+      <p>Giving used golf carts a new lease on life with careful workmanship.</p>
+    </div>
+  </article>
+
+  <!-- 3. CUSTOM BUILDS & SPRAY WORK -->
+  <article class="gallery-card">
+    <div class="gallery-photo gallery-photo-pair">
+      <img src="custombuild-and-respray1.jpg"
+           alt="Custom golf cart build and spray work">
+      <img src="custombuild-and-respray2.jpg"
+           alt="Golf cart custom finish and respray">
+    </div>
+    <div class="gallery-caption">
+      <h3>Custom Builds &amp; Spray Work</h3>
+      <p>Custom finishes, bodywork and upgrades to suit each cart and owner.</p>
+    </div>
+  </article>
+
+  <!-- 4. REPAIRS & UPGRADES -->
+  <article class="gallery-card">
+    <div class="gallery-photo">
+      <img src="repairs-and-upgrades.jpg"
+           alt="Golf cart repairs and upgrades">
+    </div>
+    <div class="gallery-caption">
+      <h3>Repairs &amp; Upgrades</h3>
+      <p>From electrical work to battery upgrades and general maintenance.</p>
+    </div>
+  </article>
+
+</div>
 
     <div class="gallery-contact">
       <h3>Have a golf cart that needs attention?</h3>
